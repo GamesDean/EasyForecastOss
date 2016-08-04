@@ -56,7 +56,15 @@ Naming/Layout:
     - ```<Company>.(<Product>|<Technology>)```
   - 1 class per file (but we can have more than one if it makes sense)
 
-
+Methods definition (write the following _code comment_ before any method):
+```
+Purpose: Compute the maximum element of an array of decimals 
+Name: Maximum 
+Inputs: Array Of decimals 
+Output/Return: A decimal value 
+Side effects: None
+Error case: Array must not be null; Array must not be empty 
+```
 
    [Building Maintainable Software]: <https://www.safaribooksonline.com/library/view/building-maintainable-software/9781491967423/>
    [GitHub Flow]: <https://guides.github.com/introduction/flow/index.html>
