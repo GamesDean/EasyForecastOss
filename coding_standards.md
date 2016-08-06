@@ -42,11 +42,16 @@ does not modify the state of the outside world in any way (e.g. changing a globa
 Write Commands _(void methods that return nothing other than errors)_:
   - that change the state changing parameters passed to the function (or have others side effects, e.g. changing a global variable, writing to the hard disk, reading user input from the console, or receiving data over the network)
 
-Avoid throwing exceptions, but return a Compound Object (a state + one or more objects), with query and commands. See 
+Avoid throwing exceptions, but return a _Compound Object_ (a state + one or more objects), with query and commands. See 
   - [C# functional extensions (NuGet library, By Vladimir Khorikov)] 
   - [Functional C#: Handling failures, input errors (Article By Vladimir Khorikov)] 
+  - [Functional C#: Primitive obsession]
 
 Don't write string/num literals in the code, but use class parameters/data structures/constants.
+
+Null:
+  - never return Null; return an empty collecition or an empty array if needed, or a compound object (see above)
+  - test if a Null argument is passed and the member does not support null arguments; never throw exception 'ArgumentNullException' but return a compound object (see above)
 
 Naming/Layout:
   - Namespace (and directory structure) 
@@ -70,3 +75,4 @@ Error case: Array must not be null; Array must not be empty
    [GitHub Flow]: <https://guides.github.com/introduction/flow/index.html>
    [C# functional extensions (NuGet library, By Vladimir Khorikov)]: <http://enterprisecraftsmanship.com/2016/06/24/c-functional-extensions-nuget-library/>
    [Functional C#: Handling failures, input errors (Article By Vladimir Khorikov)]: <http://enterprisecraftsmanship.com/2015/03/20/functional-c-handling-failures-input-errors/>
+   [Functional C#: Primitive obsession]: <http://enterprisecraftsmanship.com/2015/03/07/functional-c-primitive-obsession/>
