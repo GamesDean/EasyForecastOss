@@ -34,6 +34,10 @@ Prefer [Composition over inheritance].
 
 Make your objects as immutable as possible.
 
+Use immutability in the code base on an architectural level; see:
+  - [Immutable architecture, article]
+  - [Immutable architecture, GitHub repo]
+
 Write Query _(functions that return something)_:
   - The function is idempotent: given the same input parameters, the function always returns the exact same result.
   - The function does not have side effects: 
@@ -49,7 +53,7 @@ Avoid throwing exceptions, but return a _Compound Object_ (a state + one or more
   - [Functional C#: Handling failures, input errors (Article By Vladimir Khorikov)] 
   - [Functional C#: Primitive obsession]
 
-Don't write string/num literals in the code, but use class parameters/data structures/constants.
+Don't write string/num literals in the code, but use struct/class parameters/data structures/constants.
 
 Null:
   - never return Null; return an empty collecition or an empty array if needed, or a compound object (see above)
@@ -79,4 +83,5 @@ Error case: Array must not be null; Array must not be empty
    [Functional C#: Handling failures, input errors (Article By Vladimir Khorikov)]: <http://enterprisecraftsmanship.com/2015/03/20/functional-c-handling-failures-input-errors/>
    [Functional C#: Primitive obsession]: <http://enterprisecraftsmanship.com/2015/03/07/functional-c-primitive-obsession/>
    [Composition over inheritance]: <https://en.wikipedia.org/wiki/Composition_over_inheritance>
-   
+   [Immutable architecture, article]: <http://enterprisecraftsmanship.com/2016/05/12/immutable-architecture/>
+   [Immutable architecture, GitHub repo]: <https://github.com/vkhorikov/ImmutableArchitecture>
