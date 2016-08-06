@@ -28,7 +28,9 @@ Loose coupling _(dependency inversion principle/inversion of control IOC/depende
   - Library dependencies: inject dependencies as constructor parameters <also interfaces>, IOC/Inversion Of Control containers. As a rule of thumb, do injected abstraction over a concrete implementation for libraries that 1) Have side effects 2) Behave differently in different environments
   - Global variables: inject dependencies as constructor parameters <or as function parameters, using also interfaces>
  
-High cohesion _(all the variables and methods should be related, everything should operate at the same level of abstraction, and the pieces should fit neatly together)_
+High cohesion _(all the variables and methods should be related, everything should operate at the same level of abstraction, and the pieces should fit neatly together)_.
+
+Prefer [Composition over inheritance].
 
 Make your objects as immutable as possible.
 
@@ -76,3 +78,5 @@ Error case: Array must not be null; Array must not be empty
    [C# functional extensions (NuGet library, By Vladimir Khorikov)]: <http://enterprisecraftsmanship.com/2016/06/24/c-functional-extensions-nuget-library/>
    [Functional C#: Handling failures, input errors (Article By Vladimir Khorikov)]: <http://enterprisecraftsmanship.com/2015/03/20/functional-c-handling-failures-input-errors/>
    [Functional C#: Primitive obsession]: <http://enterprisecraftsmanship.com/2015/03/07/functional-c-primitive-obsession/>
+   [Composition over inheritance]: <https://en.wikipedia.org/wiki/Composition_over_inheritance>
+   
