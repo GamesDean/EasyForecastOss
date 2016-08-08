@@ -35,7 +35,7 @@ Prefer [Composition over inheritance].
 Make your objects as immutable as possible.
 
 Use immutability in the code base on an architectural level; see:
-  - [Immutable architecture, article]
+  - [Immutable architecture, article], inspired by [Event Sourcing Pattern]
   - [Immutable architecture, GitHub repo]
 
 Write Query _(functions that return something)_:
@@ -85,3 +85,4 @@ Error case: Array must not be null; Array must not be empty
    [Composition over inheritance]: <https://en.wikipedia.org/wiki/Composition_over_inheritance>
    [Immutable architecture, article]: <http://enterprisecraftsmanship.com/2016/05/12/immutable-architecture/>
    [Immutable architecture, GitHub repo]: <https://github.com/vkhorikov/ImmutableArchitecture>
+   [Event Sourcing Pattern]: <https://msdn.microsoft.com/en-us/library/dn589792.aspx>
