@@ -77,6 +77,8 @@ Side effects: None
 Error case: Array must not be null; Array must not be empty 
 ```
 
+For C# specific design guidelines see [Framework Design Guidelines]
+
    [Building Maintainable Software]: <https://www.safaribooksonline.com/library/view/building-maintainable-software/9781491967423/>
    [GitHub Flow]: <https://guides.github.com/introduction/flow/index.html>
    [C# functional extensions (NuGet library, By Vladimir Khorikov)]: <http://enterprisecraftsmanship.com/2016/06/24/c-functional-extensions-nuget-library/>
@@ -86,3 +88,4 @@ Error case: Array must not be null; Array must not be empty
    [Immutable architecture, article]: <http://enterprisecraftsmanship.com/2016/05/12/immutable-architecture/>
    [Immutable architecture, GitHub repo]: <https://github.com/vkhorikov/ImmutableArchitecture>
    [Event Sourcing Pattern]: <https://msdn.microsoft.com/en-us/library/dn589792.aspx>
+   [Framework Design Guidelines]: <https://msdn.microsoft.com/en-us/library/ms229042(v=vs.110).aspx>
