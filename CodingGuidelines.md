@@ -67,7 +67,7 @@ Naming/Layout:
     - ```<Company>.(<Product>|<Technology>)```
   - 1 class per file (but we can have more than one if it makes sense)
 
-Methods definition (write the following _code comment_ before any method):
+Methods definition (write the following _code comment_ before *at least* any public method, and any private method that have any side effect \<_aka Commands_\>):
 ```
 Purpose: Compute the maximum element of an array of decimals 
 Name: Maximum 
