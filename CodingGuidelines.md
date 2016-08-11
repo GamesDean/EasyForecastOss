@@ -77,6 +77,7 @@ Side effects: None
 Error case: Array must not be null; Array must not be empty 
 ```
 
+
 For C# specific design guidelines see [Framework Design Guidelines]
 
    [Building Maintainable Software]: <https://www.safaribooksonline.com/library/view/building-maintainable-software/9781491967423/>
