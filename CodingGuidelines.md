@@ -1,6 +1,6 @@
 # Coding standards
 
-Publish code to a shared repository following the [GitHub Flow] workflow.
+Publish code to a shared repository following the [GitHub Flow] workflow; see also [GitHub Pull requests] and [Bitbucket Pull requests].
 
 Code metrics (from [Building Maintainable Software] )
 
@@ -89,3 +89,5 @@ For C# specific design guidelines see [Framework Design Guidelines]
    [Immutable architecture, GitHub repo]: <https://github.com/vkhorikov/ImmutableArchitecture>
    [Event Sourcing Pattern]: <https://msdn.microsoft.com/en-us/library/dn589792.aspx>
    [Framework Design Guidelines]: <https://msdn.microsoft.com/en-us/library/ms229042(v=vs.110).aspx>
+   [GitHub Pull requests]: <https://help.github.com/articles/using-pull-requests/>
+   [Bitbucket Pull requests]: <https://www.atlassian.com/git/tutorials/making-a-pull-request>
