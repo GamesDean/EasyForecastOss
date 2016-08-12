@@ -29,6 +29,9 @@ namespace EasyForecast.SymEngine.Json
         public int[] GetFecFieldValues(string numArrayName, JToken input)
         {
 
+            if (input == null)
+                throw new ArgumentNullException("input");
+
             JToken arrayContent = input.SelectToken("$.FECs..NumParameters[?(@.ArrayName==" + numArrayName + ")].ArrayContent");
 
             List<int> fList = new List<int>();
