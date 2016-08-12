@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Ciloci.Flee;
 
 namespace EasyForecast.SymEngine.Json
 {
@@ -58,6 +59,37 @@ namespace EasyForecast.SymEngine.Json
         {
             int[] shuffled = values.OrderBy(n => Guid.NewGuid()).ToArray();
             return shuffled;
+        }
+
+
+
+        /// <summary>
+        /// Purpose:Using flee# library and the CustomFunctions class,calculates the pow^7
+        /// Name : PowCalculator
+        /// Output/Return : a string array
+        /// Side Effects : none
+        /// Error case : the array passed as parameter must not be null/empty
+        /// </summary>
+        /// <param name="values"></param>
+
+        public double[] PowCalculator(int[] values)
+        {
+            ExpressionContext context = new ExpressionContext();
+            context.Imports.AddType(typeof(CustomFunctions));
+            List<double> list = new List<double>();
+
+                foreach (var item in values)
+                {
+                    context.Variables["a"] = item;
+                    IDynamicExpression eDynamic = context.CompileDynamic("lotofpow(a)");
+
+                    double result = (double)eDynamic.Evaluate();
+                    list.Add(result);                               
+                }
+
+                double[] evaluation = list.ToArray();
+            return evaluation;
+
         }
 
 

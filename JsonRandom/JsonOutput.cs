@@ -77,11 +77,11 @@ namespace EasyForecast.SymEngine.Json
         {
 
             int[] fieldValue = jInput.GetFecFieldValues(numArrayName, input);
-            int[] shuffledValues = jInput.Shuffle(fieldValue);
+            double[] shuffledValues = jInput.PowCalculator(fieldValue);
 
             for (int i = 0; i < shuffledValues.Length; i++)
             {
-                int valueShuffled = shuffledValues[i];
+                double valueShuffled = shuffledValues[i];
                 int n = 0;
                 if (numColumnName.Equals(numColumnNameXYZ1)) { n = 0; }
                 if (numColumnName.Equals(numColumnNameXYZ2)) { n = 1; }
