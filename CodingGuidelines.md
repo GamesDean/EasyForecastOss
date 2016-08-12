@@ -1,4 +1,4 @@
-# Coding standards
+# Coding guidelines
 
 Publish code to a shared repository following the [GitHub Flow] workflow; see also [GitHub Pull requests] and [Bitbucket Pull requests].
 
