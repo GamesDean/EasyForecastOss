@@ -13,7 +13,7 @@ namespace EasyForecast.SymEngine.Json
 
         static string path = "C:\\Users\\Lorenzo\\Documents\\Visual Studio 2015\\Projects\\JsonRandom\\JsonRandom\\json_sample\\";
 
-        ///read the json input from file,then parse it 
+        // read the json input from file,then parse it 
 
         static string readJsonInputFromFile = System.IO.File.ReadAllText(path + "json_sample_input.json");
         static string jsonInputResult = JsonConvert.DeserializeObject(readJsonInputFromFile).ToString();

@@ -49,7 +49,6 @@ namespace EasyForecast.SymEngine.Json
         /// Output/Return : a string array
         /// Side Effects : none
         /// Error case : the array passed as parameter must not be null/empty
-        /// 
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
