@@ -8,7 +8,7 @@ namespace EasyForecast.SymEngine.Json
 {
     public class InputClass
     {
-
+        // TODO: if useful implement suggestion of rule "CA2227: Collection properties should be read only" https://msdn.microsoft.com/library/ms182327.aspx?cs-save-lang=1&cs-lang=csharp )
         public class NumParameter
         {
             public string ArrayName { get; set; }
