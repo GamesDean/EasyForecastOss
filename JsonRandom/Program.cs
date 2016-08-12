@@ -13,7 +13,7 @@ namespace EasyForecast.SymEngine.Json
     public class Program
     {
 
-        static void Main(string[] args)
+        static void Main()
         {
 
             string path = "C:\\Users\\Lorenzo\\Documents\\Visual Studio 2015\\Projects\\JsonRandom\\JsonRandom\\json_sample\\";
