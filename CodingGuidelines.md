@@ -1,6 +1,6 @@
 # Coding guidelines
 
-Publish code to a shared repository following the [GitHub Flow] workflow; see also [GitHub Pull requests] and [Bitbucket Pull requests].
+Contribute to this repository as in [Contributing Guidelines].
 
 Code metrics (from [Building Maintainable Software] )
 
@@ -81,7 +81,6 @@ Error case: Array must not be null; Array must not be empty
 For C# specific design guidelines see [Framework Design Guidelines]
 
    [Building Maintainable Software]: <https://www.safaribooksonline.com/library/view/building-maintainable-software/9781491967423/>
-   [GitHub Flow]: <https://guides.github.com/introduction/flow/index.html>
    [C# functional extensions (NuGet library, By Vladimir Khorikov)]: <http://enterprisecraftsmanship.com/2016/06/24/c-functional-extensions-nuget-library/>
    [Functional C#: Handling failures, input errors (Article By Vladimir Khorikov)]: <http://enterprisecraftsmanship.com/2015/03/20/functional-c-handling-failures-input-errors/>
    [Functional C#: Primitive obsession]: <http://enterprisecraftsmanship.com/2015/03/07/functional-c-primitive-obsession/>
@@ -90,5 +89,4 @@ For C# specific design guidelines see [Framework Design Guidelines]
    [Immutable architecture, GitHub repo]: <https://github.com/vkhorikov/ImmutableArchitecture>
    [Event Sourcing Pattern]: <https://msdn.microsoft.com/en-us/library/dn589792.aspx>
    [Framework Design Guidelines]: <https://msdn.microsoft.com/en-us/library/ms229042(v=vs.110).aspx>
-   [GitHub Pull requests]: <https://help.github.com/articles/using-pull-requests/>
-   [Bitbucket Pull requests]: <https://www.atlassian.com/git/tutorials/making-a-pull-request>
+   [Contributing Guidelines]: <https://github.com/stefano77it/EasyForecastOss/blob/master/README.md>
