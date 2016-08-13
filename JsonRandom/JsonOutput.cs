@@ -16,6 +16,8 @@ namespace EasyForecast.SymEngine.Json
         /// </summary>
 
         private static string numColumnNameXYZ1 = "'NumColumnNameXYZ1'";
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         public string NumColumnNameXYZ1
         {
             get { return numColumnNameXYZ1; }
@@ -23,6 +25,8 @@ namespace EasyForecast.SymEngine.Json
         }
 
         private static string numColumnNameXYZ2 = "'NumColumnNameXYZ2'";
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         public string NumColumnNameXYZ2
         {
             get { return numColumnNameXYZ2; }
@@ -30,6 +34,8 @@ namespace EasyForecast.SymEngine.Json
         }
 
         private static string numColumnNameXYZ3 = "'NumColumnNameXYZ3'";
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         public string NumColumnNameXYZ3
         {
             get { return numColumnNameXYZ3; }
@@ -41,6 +47,8 @@ namespace EasyForecast.SymEngine.Json
         /// </summary>
 
         private static string numArrayNameXYZ1 = "'NumArrayNameXYZ1'";
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         public string NumArrayNameXYZ1
         {
             get { return numArrayNameXYZ1; }
@@ -48,6 +56,8 @@ namespace EasyForecast.SymEngine.Json
         }
 
         private static string numArrayNameXYZ2 = "'NumArrayNameXYZ2'";
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         public string NumArrayNameXYZ2
         {
             get { return numArrayNameXYZ2; }
@@ -55,6 +65,8 @@ namespace EasyForecast.SymEngine.Json
         }
 
         private static string numArrayNameXYZ3 = "'NumArrayNameXYZ3'";
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         public string NumArrayNameXYZ3
         {
             get { return numArrayNameXYZ3; }
