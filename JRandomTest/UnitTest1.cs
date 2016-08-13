@@ -12,7 +12,9 @@ namespace EasyForecast.SymEngine.Json
     public class JsonInputTest
     {
 
-        static string path = "C:\\Users\\Lorenzo\\Documents\\Visual Studio 2015\\Projects\\JsonRandom\\JsonRandom\\json_sample\\";
+        // static string path = "C:\\Users\\Lorenzo\\Documents\\Visual Studio 2015\\Projects\\JsonRandom\\JsonRandom\\json_sample\\";
+        static string path = Environment.CurrentDirectory + "\\TestData\\";
+        
 
         // read the json input from file,then parse it 
 

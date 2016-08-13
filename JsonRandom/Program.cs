@@ -19,7 +19,7 @@ namespace EasyForecast.SymEngine.Json
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1804:RemoveUnusedLocals", MessageId = "numArrayNameXYZ2")]
         static void Main()
         {
-            string path = Environment.CurrentDirectory + "\\json_sample\\";
+            string path = Environment.CurrentDirectory + "\\TestData\\";
 
             // read the json input from file, then parse it 
 
