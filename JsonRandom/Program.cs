@@ -13,6 +13,10 @@ namespace EasyForecast.SymEngine.Json
     public class Program
     {
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1804:RemoveUnusedLocals", MessageId = "numColumnNameXYZ3")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1804:RemoveUnusedLocals", MessageId = "numColumnNameXYZ2")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1804:RemoveUnusedLocals", MessageId = "numArrayNameXYZ3")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1804:RemoveUnusedLocals", MessageId = "numArrayNameXYZ2")]
         static void Main()
         {
             string path = Environment.CurrentDirectory + "\\json_sample\\";
