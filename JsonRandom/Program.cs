@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FluentAssertions;
 
+[assembly: CLSCompliant(true)]
 
 namespace EasyForecast.SymEngine.Json
 {

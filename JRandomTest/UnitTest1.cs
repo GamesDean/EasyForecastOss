@@ -5,6 +5,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
+[assembly: CLSCompliant(true)]
+
 namespace EasyForecast.SymEngine.Json
 {
 
