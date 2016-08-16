@@ -21,19 +21,21 @@ namespace EasyForecast.SymEngine.Json
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1804:RemoveUnusedLocals", MessageId = "numArrayNameXYZ2")]
         static void Main()
         {
-            string path = Environment.CurrentDirectory + "\\TestData\\";
+            string path = Environment.CurrentDirectory + Constants.TestDataPath;
 
             // read the json input from file, then parse it 
 
-            string readJsonInputFromFile = System.IO.File.ReadAllText(path + "json_sample_input.json");
+            string readJsonInputFromFile = System.IO.File.ReadAllText(path + Constants.JsonSampleInputFileName);
 
             //string jsonInputResult = JsonConvert.DeserializeObject(readJsonInputFromFile).ToString();
             //JToken jtokenJsoninput = JObject.Parse(jsonInputResult);
             JToken jtokenJsoninput = JObject.Parse(readJsonInputFromFile);
 
+            JsonInputModel JsonInputClass = JsonConvert.DeserializeObject<JsonInputModel>(readJsonInputFromFile);
+
             // read the json output from file,then parse it   
 
-            string readJsonOutputFromFile = System.IO.File.ReadAllText(path + "json_sample_output.json");
+            string readJsonOutputFromFile = System.IO.File.ReadAllText(path + Constants.JsonSampleOutputFileName);
             //string jsonOutputResult = (string)JsonConvert.DeserializeObject(readJsonOutputFromFile).ToString();
             //JToken jtokenJsonOutput = JObject.Parse(jsonOutputResult);
             JToken jtokenJsonOutput = JObject.Parse(readJsonOutputFromFile);
