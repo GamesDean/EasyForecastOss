@@ -7,13 +7,13 @@ using Xunit;
 using FluentAssertions;
 using EasyForecast.SymEngine.Json;
 
-namespace EasyForecast.SymEngine.JsonTest
+namespace EasyForecast.SymEngine.Json.Tests
 {
     public class JsonInputTest2
     {
 
         // parse input Json
-        JToken jtokenJsoninput = JObject.Parse(Constants.JsonSampleInputData1);
+        JToken jtokenJsoninput = JObject.Parse(ConstantsJsonSamples.JsonSampleInputData1);
 
 
         [Fact]

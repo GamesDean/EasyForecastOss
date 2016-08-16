@@ -8,7 +8,7 @@ using EasyForecast.SymEngine.Json;
 
 [assembly: CLSCompliant(true)]
 
-namespace EasyForecast.SymEngine.JsonTest
+namespace EasyForecast.SymEngine.Json.Tests
 {
 
     [TestClass]
@@ -16,7 +16,7 @@ namespace EasyForecast.SymEngine.JsonTest
     {
 
         // parse input Json
-        JToken jtokenJsoninput = JObject.Parse(Constants.JsonSampleInputData1);
+        JToken jtokenJsoninput = JObject.Parse(ConstantsJsonSamples.JsonSampleInputData1);
 
         [TestMethod]
         public void GetFecFieldValuesTestXYZ1()
