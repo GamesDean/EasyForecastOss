@@ -12,8 +12,6 @@ namespace EasyForecast.SymEngine.Json
     public class JsonInput
     {
 
-
-
         /// <summary>
         /// Purpose:Get selected values from FECs.NumParameters.NumArrayXYZ'n'.ArrayContent
         /// Name : GetFecFieldValues

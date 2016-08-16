@@ -1,15 +1,15 @@
 ﻿
 using System;
-using System.Collections.Generic;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
+using Xunit;
+using FluentAssertions;
+
 namespace EasyForecast.SymEngine.Json
 {
-
-    [TestClass]
-    public class JsonInputTest
+    public class JsonInputTest2
     {
 
         // static string path = "C:\\Users\\Lorenzo\\Documents\\Visual Studio 2015\\Projects\\JsonRandom\\JsonRandom\\json_sample\\";
@@ -23,29 +23,28 @@ namespace EasyForecast.SymEngine.Json
         JToken jtokenJsoninput = JObject.Parse(jsonInputResult);
 
 
-        [TestMethod]
-        public void GetFecFieldValuesTestXYZ1()
+        [Fact]
+        public void GetFecFieldValuesTestXYZ1xUnit()
         {
             JsonInput jTest = new JsonInput();
-           
-            var result = jTest.GetFecFieldValues("'NumArrayNameXYZ1'", jtokenJsoninput);
-            CollectionAssert.AreEqual(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 },result);
+            int[] result = jTest.GetFecFieldValues("'NumArrayNameXYZ1'", jtokenJsoninput);
+            result.Should().BeEquivalentTo(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 });
         }
 
-        [TestMethod]
-        public void GetFecFieldValuesTestXYZ2()
+        [Fact]
+        public void GetFecFieldValuesTestXYZ2xUnit()
         {
             JsonInput jTest = new JsonInput();
-            var result = jTest.GetFecFieldValues("'NumArrayNameXYZ2'", jtokenJsoninput);
-            CollectionAssert.AreEqual(new int[] { 9, 8, 7, 6, 5, 4, 3, 2, 1 }, result);
+            int[] result = jTest.GetFecFieldValues("'NumArrayNameXYZ2'", jtokenJsoninput);
+            result.Should().BeEquivalentTo(new int[] { 9, 8, 7, 6, 5, 4, 3, 2, 1 });
         }
 
-        [TestMethod]
-        public void GetFecFieldValuesTestXYZ3()
+        [Fact]
+        public void GetFecFieldValuesTestXYZ3xUnit()
         {
             JsonInput jTest = new JsonInput();
-            var result = jTest.GetFecFieldValues("'NumArrayNameXYZ3'", jtokenJsoninput);
-            CollectionAssert.AreEqual(new int[] { 5, 4, 3, 2, 1, 9, 8, 7, 6 }, result);
+            int[] result = jTest.GetFecFieldValues("'NumArrayNameXYZ3'", jtokenJsoninput);
+            result.Should().BeEquivalentTo(new int[] { 5, 4, 3, 2, 1, 9, 8, 7, 6 });
         }
 
 
