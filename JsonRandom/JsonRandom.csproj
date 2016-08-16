@@ -62,10 +62,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="InputClass.cs" />
+    <Compile Include="JsonInputModel.cs" />
     <Compile Include="JsonInput.cs" />
     <Compile Include="JsonOutput.cs" />
-    <Compile Include="OutputClass.cs" />
+    <Compile Include="JsonOutputModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
