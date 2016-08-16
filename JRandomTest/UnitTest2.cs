@@ -3,25 +3,17 @@ using System;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-
 using Xunit;
 using FluentAssertions;
+using EasyForecast.SymEngine.Json;
 
-namespace EasyForecast.SymEngine.Json
+namespace EasyForecast.SymEngine.JsonTest
 {
     public class JsonInputTest2
     {
 
-        // static string path = "C:\\Users\\Lorenzo\\Documents\\Visual Studio 2015\\Projects\\JsonRandom\\JsonRandom\\json_sample\\";
-        static string path = Environment.CurrentDirectory + Constants.TestDataPath;
-        
-
-        // read the json input from file,then parse it 
-
-        static string readJsonInputFromFile = System.IO.File.ReadAllText(path + Constants.JsonSampleInputFileName);
-        //static string jsonInputResult = JsonConvert.DeserializeObject(readJsonInputFromFile).ToString();
-        //JToken jtokenJsoninput = JObject.Parse(jsonInputResult);
-        JToken jtokenJsoninput = JObject.Parse(readJsonInputFromFile);
+        // parse input Json
+        JToken jtokenJsoninput = JObject.Parse(Constants.JsonSampleInputData1);
 
 
         [Fact]

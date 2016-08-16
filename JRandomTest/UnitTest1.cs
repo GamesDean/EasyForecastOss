@@ -4,26 +4,19 @@ using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using EasyForecast.SymEngine.Json;
 
 [assembly: CLSCompliant(true)]
 
-namespace EasyForecast.SymEngine.Json
+namespace EasyForecast.SymEngine.JsonTest
 {
 
     [TestClass]
     public class JsonInputTest
     {
 
-        static string path = Environment.CurrentDirectory + Constants.TestDataPath;
-        
-
-        // read the json input from file,then parse it 
-
-        static string readJsonInputFromFile = System.IO.File.ReadAllText(path + Constants.JsonSampleInputFileName);
-        //static string jsonInputResult = JsonConvert.DeserializeObject(readJsonInputFromFile).ToString();
-        //JToken jtokenJsoninput = JObject.Parse(jsonInputResult);
-        JToken jtokenJsoninput = JObject.Parse(readJsonInputFromFile);
-
+        // parse input Json
+        JToken jtokenJsoninput = JObject.Parse(Constants.JsonSampleInputData1);
 
         [TestMethod]
         public void GetFecFieldValuesTestXYZ1()
