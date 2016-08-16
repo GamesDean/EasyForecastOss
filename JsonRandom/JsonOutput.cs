@@ -73,8 +73,6 @@ namespace EasyForecast.SymEngine.Json
             set { numArrayNameXYZ3 = value; }
         }
 
-        private JsonInput jInput = new JsonInput();
-
         /// <summary>
         /// Purpose:Writes the shuffled values into the output json file
         /// Name : Jreplace
@@ -87,6 +85,7 @@ namespace EasyForecast.SymEngine.Json
 
         public string Jreplace(JToken input, string numArrayName, string numColumnName, JToken output)
         {
+            JsonInput jInput = new JsonInput();
 
             int[] fieldValue = jInput.GetFecFieldValues(numArrayName, input);
             int[] shuffledValues = jInput.Shuffle(fieldValue);
