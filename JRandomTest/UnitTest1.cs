@@ -19,8 +19,9 @@ namespace EasyForecast.SymEngine.Json
         // read the json input from file,then parse it 
 
         static string readJsonInputFromFile = System.IO.File.ReadAllText(path + "json_sample_input.json");
-        static string jsonInputResult = JsonConvert.DeserializeObject(readJsonInputFromFile).ToString();
-        JToken jtokenJsoninput = JObject.Parse(jsonInputResult);
+        //static string jsonInputResult = JsonConvert.DeserializeObject(readJsonInputFromFile).ToString();
+        //JToken jtokenJsoninput = JObject.Parse(jsonInputResult);
+        JToken jtokenJsoninput = JObject.Parse(readJsonInputFromFile);
 
 
         [TestMethod]

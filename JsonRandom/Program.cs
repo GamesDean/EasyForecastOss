@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FluentAssertions;
 
 
 namespace EasyForecast.SymEngine.Json
@@ -24,20 +25,23 @@ namespace EasyForecast.SymEngine.Json
             // read the json input from file, then parse it 
 
             string readJsonInputFromFile = System.IO.File.ReadAllText(path + "json_sample_input.json");
-            string jsonInputResult = JsonConvert.DeserializeObject(readJsonInputFromFile).ToString();
-            JToken jtokenJsoninput = JObject.Parse(jsonInputResult);
+
+            //string jsonInputResult = JsonConvert.DeserializeObject(readJsonInputFromFile).ToString();
+            //JToken jtokenJsoninput = JObject.Parse(jsonInputResult);
+            JToken jtokenJsoninput = JObject.Parse(readJsonInputFromFile);
 
             // read the json output from file,then parse it   
 
             string readJsonOutputFromFile = System.IO.File.ReadAllText(path + "json_sample_output.json");
-            string jsonOutputResult = (string)JsonConvert.DeserializeObject(readJsonOutputFromFile).ToString();
-            JToken jtokenJsonOutput = JObject.Parse(jsonOutputResult);
+            //string jsonOutputResult = (string)JsonConvert.DeserializeObject(readJsonOutputFromFile).ToString();
+            //JToken jtokenJsonOutput = JObject.Parse(jsonOutputResult);
+            JToken jtokenJsonOutput = JObject.Parse(readJsonOutputFromFile);
 
 
 
             JsonOutput jOutput = new JsonOutput();
 
-            // input json fields to shuffle,you can choose one of them
+            // input json fields to shuffle, you can choose one of them
             
             string numArrayNameXYZ1 = jOutput.NumArrayNameXYZ1;
             string numArrayNameXYZ2 = jOutput.NumArrayNameXYZ2;
