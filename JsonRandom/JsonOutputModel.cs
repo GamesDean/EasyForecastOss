@@ -35,7 +35,7 @@ namespace EasyForecast.SymEngine.Json
         public IList<DateColumn> DateColumns { get; set; }
     }
 
-    public class JsonOutputClass
+    public class JsonOutputModel
     {
         public IList<Table> Tables { get; set; }
     }

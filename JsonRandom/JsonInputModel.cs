@@ -56,7 +56,7 @@ namespace EasyForecast.SymEngine.Json
         public IList<FmlDateParameter> FmlDateParameters { get; set; }
     }
 
-    public class JsonInputClass
+    public class JsonInputModel
     {
         public IList<FEC> FECs { get; set; }
     }
