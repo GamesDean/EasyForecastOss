@@ -60,7 +60,6 @@ namespace EasyForecast.SymEngine.Json
             return shuffled;
         }
 
-
     }
 
 }
