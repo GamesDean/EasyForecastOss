@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EasyForecast.SymEngine.Json
 {
-    // TODO: if useful modify IList<> properties implementing suggestion of rule "CA2227: Collection properties should be read only" https://msdn.microsoft.com/library/ms182327.aspx?cs-save-lang=1&cs-lang=csharp )
+    // TODO if useful modify IList<> properties implementing suggestion of rule "CA2227: Collection properties should be read only" https://msdn.microsoft.com/library/ms182327.aspx?cs-save-lang=1&cs-lang=csharp )
     public class NumParameter
     {
         public string ArrayName { get; set; }
