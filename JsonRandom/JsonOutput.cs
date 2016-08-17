@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace EasyForecast.SymEngine.Json
 {
-    class JsonOutput
+    public class JsonOutput
     {
 
         /// <summary>
@@ -77,7 +77,7 @@ namespace EasyForecast.SymEngine.Json
         /// Purpose:Writes the shuffled values into the output json file
         /// Name : Jreplace
         /// Output/Return : a string 
-        /// Side Effects : none
+        /// Side Effects : CHANGE 'output' parameter
         /// Error case : the values passed as parameter must not be null  
         /// </summary>
         /// <param name="numArrayName"></param>
@@ -104,7 +104,6 @@ namespace EasyForecast.SymEngine.Json
             return outputFec;
 
         }
-
 
     }
 
