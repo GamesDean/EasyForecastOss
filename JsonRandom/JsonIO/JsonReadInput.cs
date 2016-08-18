@@ -11,7 +11,7 @@ namespace EasyForecast.SymEngine.JsonIO
     public class JsonReadInput
     {
         // TODONOW write ReadJsonStringFromFile
-        public Result<string> ReadJsonStringFromFile(string InpuFilePath)
+        public Result<string> ReadJsonStringFromFile(string InputFilePath)
         {
             return Result.Ok("JsonString");
         }

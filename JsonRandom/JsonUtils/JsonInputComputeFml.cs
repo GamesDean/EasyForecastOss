@@ -6,6 +6,7 @@ namespace EasyForecast.SymEngine.JsonUtils
     public class JsonInputComputeFml
     {
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic")]
         public Result ComputeFml(JsonInputModel jsonInput)
         {
             if (jsonInput == null)
