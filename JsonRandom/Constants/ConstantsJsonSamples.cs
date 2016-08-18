@@ -1,4 +1,4 @@
-﻿namespace EasyForecast.SymEngine.Json.Tests
+﻿namespace EasyForecast.SymEngine.Constants
 {
     public static class ConstantsJsonSamples
     {

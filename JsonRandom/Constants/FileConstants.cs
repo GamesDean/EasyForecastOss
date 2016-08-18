@@ -1,6 +1,6 @@
-﻿namespace EasyForecast.SymEngine.Json
+﻿namespace EasyForecast.SymEngine.Constants
 {
-    public static class Constants
+    public static class FileConstants
     {
         public static readonly string TestDataPath = "\\TestData\\";
         public static readonly string JsonSampleInputFileName = "json_sample_input.json";
