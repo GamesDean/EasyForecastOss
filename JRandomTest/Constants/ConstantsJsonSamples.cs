@@ -1,4 +1,4 @@
-﻿namespace EasyForecast.SymEngine.Json
+﻿namespace EasyForecast.SymEngine.Tests.Constants
 {
     public static class ConstantsJsonSamples
     {
@@ -111,6 +111,135 @@
             }]
         }
             ";
+
+        public static readonly string JsonSampleInputData2 = @"
+        {
+            'FECs': [{
+                'FecName': 'FecNameXYZ',
+                'FecId': 1,
+                'OrderedParameterNames': ['NumArrayNameXYZ1', 'StrArrayNameXYZ1', 'NumArrayNameXYZ2', '...and other parameter names...'],
+                'NumParameters': [{
+                    'ArrayName': 'NumArrayNameXYZ1',
+                    'ArrayContent': [1, 2, 3, 4, 5, 6, 7, 8, 9]
+                }],
+                'StrParameters': [{
+                    'ArrayName': 'StrArrayNameXYZ1',
+                    'ArrayContent': ['a', 'b', 'c']
+                }],
+                'DateParameters': [{
+                    'ArrayName': 'DateArrayNameXYZ1',
+                    'ArrayContent': ['16/09/1977', '23/2/1952', '18/6/1982', '5/12/1945']
+                }],
+                'FmlNumParameters': [{
+                    'ArrayName': 'FmlNumArrayNameXYZ1',
+                    'ArrayContent': [1, 2, 3]
+                }, {
+                    'ArrayName': 'FmlNumArrayNameXYZ2',
+                    'ArrayContent': [1, 2, 3]
+                }],
+                'FmlStrParameters': [{
+                    'ArrayName': 'FmlStrArrayNameXYZ1',
+                    'ArrayContent': ['a', 'b', 'c']
+                }],
+                'FmlDateParameters': [{
+                    'ArrayName': 'FmlDateArrayNameXYZ1',
+                    'ArrayContent': ['16/09/1977', '23/2/1952', '18/6/1982', '5/12/1945']
+                }]
+            }]
+        }
+            ";
+
+        // public static readonly string JsonSampleInputData2_ElaboratedWithComputeFmlOnJsonInput = "{\"FECs\":[{\"FecName\":\"FecNameXYZ\",\"FecId\":1,\"OrderedParameterNames\":[\"NumArrayNameXYZ1\",\"StrArrayNameXYZ1\",\"NumArrayNameXYZ2\",\"...and other parameter names...\"],\"NumParameters\":[{\"ArrayName\":\"NumArrayNameXYZ1\",\"ArrayContent\":[1,2,3,4,5,6,7,8,9]}],\"StrParameters\":[{\"ArrayName\":\"StrArrayNameXYZ1\",\"ArrayContent\":[\"a\",\"b\",\"c\"]}],\"DateParameters\":[{\"ArrayName\":\"DateArrayNameXYZ1\",\"ArrayContent\":[\"16/09/1977\",\"23/2/1952\",\"18/6/1982\",\"5/12/1945\"]}],\"FmlNumParameters\":[{\"ArrayName\":\"FmlNumArrayNameXYZ1\",\"ArrayContent\":[10,20,30]},{\"ArrayName\":\"FmlNumArrayNameXYZ2\",\"ArrayContent\":[10,20,30]}],\"FmlStrParameters\":[{\"ArrayName\":\"FmlStrArrayNameXYZ1\",\"ArrayContent\":[\"aXXX\",\"bXXX\",\"cXXX\"]}],\"FmlDateParameters\":[{\"ArrayName\":\"FmlDateArrayNameXYZ1\",\"ArrayContent\":[\"16/09/1977XXX\",\"23/2/1952XXX\",\"18/6/1982XXX\",\"5/12/1945XXX\"]}]}]}"	;
+        public static readonly string JsonSampleInputData2_ElaboratedWithComputeFmlOnJsonInput = @"{
+  'FECs': [
+    {
+      'FecName': 'FecNameXYZ',
+      'FecId': 1,
+      'OrderedParameterNames': [
+        'NumArrayNameXYZ1',
+        'StrArrayNameXYZ1',
+        'NumArrayNameXYZ2',
+        '...and other parameter names...'
+      ],
+      'NumParameters': [
+        {
+          'ArrayName': 'NumArrayNameXYZ1',
+          'ArrayContent': [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      'StrParameters': [
+        {
+          'ArrayName': 'StrArrayNameXYZ1',
+          'ArrayContent': [
+            'a',
+            'b',
+            'c'
+          ]
+        }
+      ],
+      'DateParameters': [
+        {
+          'ArrayName': 'DateArrayNameXYZ1',
+          'ArrayContent': [
+            '16/09/1977',
+            '23/2/1952',
+            '18/6/1982',
+            '5/12/1945'
+          ]
+        }
+      ],
+      'FmlNumParameters': [
+        {
+          'ArrayName': 'FmlNumArrayNameXYZ1',
+          'ArrayContent': [
+            10,
+            20,
+            30
+          ]
+        },
+        {
+          'ArrayName': 'FmlNumArrayNameXYZ2',
+          'ArrayContent': [
+            10,
+            20,
+            30
+          ]
+        }
+      ],
+      'FmlStrParameters': [
+        {
+          'ArrayName': 'FmlStrArrayNameXYZ1',
+          'ArrayContent': [
+            'aXXX',
+            'bXXX',
+            'cXXX'
+          ]
+        }
+      ],
+      'FmlDateParameters': [
+        {
+          'ArrayName': 'FmlDateArrayNameXYZ1',
+          'ArrayContent': [
+            '16/09/1977XXX',
+            '23/2/1952XXX',
+            '18/6/1982XXX',
+            '5/12/1945XXX'
+          ]
+        }
+      ]
+    }
+  ]
+}";
 
     }
 }

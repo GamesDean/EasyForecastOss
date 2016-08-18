@@ -1,6 +1,10 @@
-﻿namespace EasyForecast.SymEngine.Json.Tests
+﻿using System;
+
+[assembly: CLSCompliant(false)]
+
+namespace EasyForecast.SymEngine.Tests.Constants
 {
-    public static class Constants
+    public static class FileConstants
     {
         public static readonly string TestDataPath = "\\TestData\\";
         public static readonly string JsonSampleInputFileName = "json_sample_input.json";
