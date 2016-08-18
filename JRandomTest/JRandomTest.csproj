@@ -92,6 +92,8 @@
     <Compile Include="Constants\Constants.cs" />
     <Compile Include="Constants\ConstantsJsonSamples.cs" />
     <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="JsonIO\JsonReadInputTests.cs" />
+    <Compile Include="JsonIO\JsonWriteOutput.cs" />
     <Compile Include="JsonUtils\JsonMergeInputAndWriteOutputTests.cs" />
     <Compile Include="JsonUtils\JsonInputComputeFmlTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -8,15 +8,15 @@ using EasyForecast.SymEngine.JsonModels;
 using EasyForecast.SymEngine.Tests.Constants;
 
 
-namespace EasyForecast.SymEngine.Tests.JsonUtils
+namespace EasyForecast.SymEngine.Tests
 {
     // REMEMBER  Test that each pure function does not modify the input parameters
 
-    public class JsonElaborationsTests
+    public class JsonInputComputeFmlTests
     {
 
         [Fact]
-        public void ComputeFmlOnJsonInput_Test_Success_On_Json_Conversion()
+        public void ComputeFml_Test_Success_On_Json_Conversion()
         {
             // ARRANGE
             // deserialize Json string 'readJsonInputFromFile' in class 'JsonInputModel'
@@ -34,7 +34,7 @@ namespace EasyForecast.SymEngine.Tests.JsonUtils
         }
 
         [Fact]
-        public void ComputeFmlOnJsonInput_Test_Error_On_Input_Parameter()
+        public void ComputeFml_Test_Error_On_Input_Parameter()
         {
             // ARRANGE
             JsonInputComputeFml jsonInputComputeFml = new JsonInputComputeFml();
@@ -45,13 +45,6 @@ namespace EasyForecast.SymEngine.Tests.JsonUtils
             // ASSERT
             Assert.True(result.IsFailure);
         }
-
-        // TODONOW test MergeJsonInputAndWriteJsonOutput
-        // crea classe Json Input da stringa Json 
-        // unisci Input in Output
-        // serializza Output in stringa
-        // confronta stringa Output salvata con Output serializzato
-        // controlla che l'oggetto di input NON sia modificato, serializzandolo con JSON >>> scrivi JsonUtils to serialize/deserialize automatically, maybe storing the original object???
 
     }
 }
