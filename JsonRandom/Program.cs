@@ -1,14 +1,14 @@
-﻿
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FluentAssertions;
+using CSharpFunctionalExtensions;
+using EasyForecast.SymEngine.JsonUtils;
+using EasyForecast.SymEngine.JsonModels;
+using EasyForecast.SymEngine.Constants;
+using EasyForecast.SymEngine.Logs;
 
-[assembly: CLSCompliant(true)]
+
+[assembly: CLSCompliant(false)]
 
 namespace EasyForecast.SymEngine.Json
 {
@@ -21,46 +21,32 @@ namespace EasyForecast.SymEngine.Json
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1804:RemoveUnusedLocals", MessageId = "numArrayNameXYZ2")]
         static void Main()
         {
-            string path = Environment.CurrentDirectory + Constants.TestDataPath;
+            // new log instance
+            MessageLog log = new MessageLog();
 
-            // read the json input from file, then parse it 
+            // read the json input from file
+            string readJsonInputFromFile = System.IO.File.ReadAllText(Environment.CurrentDirectory + FileConstants.TestDataPath + FileConstants.JsonSampleInputFileName);
 
-            string readJsonInputFromFile = System.IO.File.ReadAllText(path + Constants.JsonSampleInputFileName);
+            // deserialize Json string 'readJsonInputFromFile' in class 'JsonInputModel'
+            JsonInputModel jsonInputModel = JsonConvert.DeserializeObject<JsonInputModel>(readJsonInputFromFile);
 
-            //string jsonInputResult = JsonConvert.DeserializeObject(readJsonInputFromFile).ToString();
-            //JToken jtokenJsoninput = JObject.Parse(jsonInputResult);
-            JToken jtokenJsoninput = JObject.Parse(readJsonInputFromFile);
+            // do elaborations on 'JsonInputClass'+log error
+            JsonInputComputeFml jsonInputComputeFml = new JsonInputComputeFml();
+            Result result = jsonInputComputeFml.ComputeFml(jsonInputModel);
+            if (result.IsFailure) { log.LogMessage(result.Error); }
 
-            JsonInputModel JsonInputClass = JsonConvert.DeserializeObject<JsonInputModel>(readJsonInputFromFile);
+            // TODONOW call MergeJsonInputAndWriteJsonOutput
+            // merge Input in Output object
+            // serialize output
+            // write output to file
 
-            // read the json output from file,then parse it   
+            // TODONOW commenta con XML metodi pubblici e modifica EasyForecastOss
 
-            string readJsonOutputFromFile = System.IO.File.ReadAllText(path + Constants.JsonSampleOutputFileName);
-            //string jsonOutputResult = (string)JsonConvert.DeserializeObject(readJsonOutputFromFile).ToString();
-            //JToken jtokenJsonOutput = JObject.Parse(jsonOutputResult);
-            JToken jtokenJsonOutput = JObject.Parse(readJsonOutputFromFile);
+            // TODONOW vedi se applicare interfacce, refactoring, SRP
 
+            // Remove warnings
 
-
-            JsonOutput jOutput = new JsonOutput();
-
-            // input json fields to shuffle, you can choose one of them
-            
-            string numArrayNameXYZ1 = jOutput.NumArrayNameXYZ1;
-            string numArrayNameXYZ2 = jOutput.NumArrayNameXYZ2;
-            string numArrayNameXYZ3 = jOutput.NumArrayNameXYZ3;
-
-            // output json fields takin' the shuffled values
-            
-            string numColumnNameXYZ1 = jOutput.NumColumnNameXYZ1;
-            string numColumnNameXYZ2 = jOutput.NumColumnNameXYZ2;
-            string numColumnNameXYZ3 = jOutput.NumColumnNameXYZ3;
-
-            string jsonOutput = jOutput.Jreplace( jtokenJsoninput, numArrayNameXYZ1, numColumnNameXYZ1, jtokenJsonOutput);
-
-            Console.WriteLine(jsonOutput);
             Console.ReadLine();
-
 
         }
     }

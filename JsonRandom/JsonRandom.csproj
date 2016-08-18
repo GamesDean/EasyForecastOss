@@ -61,26 +61,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConstantsJsonSamples.cs" />
-    <Compile Include="Constants.cs" />
+    <Compile Include="JsonIO\JsonWriteOutput.cs" />
+    <Compile Include="JsonIO\JsonReadInput.cs" />
+    <Compile Include="JsonUtils\JsonMergeInputAndWriteOutput.cs" />
+    <Compile Include="JsonUtils\JsonInputComputeFml.cs" />
+    <Compile Include="Logs\MessageLog.cs" />
+    <Compile Include="Constants\ConstantsJsonSamples.cs" />
+    <Compile Include="Constants\FileConstants.cs" />
     <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="JsonInputModel.cs" />
-    <Compile Include="JsonInput.cs" />
-    <Compile Include="JsonOutput.cs" />
-    <Compile Include="JsonOutputModel.cs" />
+    <Compile Include="JsonModels\JsonInputModel.cs" />
+    <Compile Include="JsonModels\JsonOutputModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="zDocs\Unused code\ClassJsonInput.txt" />
+    <Content Include="zDocs\Unused code\ClassJsonOutput.txt" />
     <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
+    <None Include="zDocs\Class diagrams\ClassDiagram1.cd" />
     <Content Include="TestData\json_sample_input.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="TestData\json_sample_output.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="ClassDiagram2.cd" />
+    <None Include="zDocs\Class diagrams\ClassDiagram2.cd" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -88,6 +93,7 @@
   <ItemGroup>
     <CodeAnalysisDictionary Include="CustomDictionary.xml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
