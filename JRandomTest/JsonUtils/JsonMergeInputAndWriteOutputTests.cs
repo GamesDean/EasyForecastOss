@@ -22,6 +22,7 @@ namespace EasyForecast.SymEngine.Tests
     public class JsonMergeInputAndWriteOutputTests
     {
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic")]
         [Fact]
         public void MergeAndWrite_Test_Success_On_Json_Merge()
         {

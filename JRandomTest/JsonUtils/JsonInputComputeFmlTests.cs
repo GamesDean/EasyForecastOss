@@ -14,6 +14,7 @@ namespace EasyForecast.SymEngine.Tests
     public class JsonInputComputeFmlTests
     {
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic")]
         [Fact]
         public void ComputeFml_Test_Success_On_Json_Conversion()
         {
@@ -29,6 +30,7 @@ namespace EasyForecast.SymEngine.Tests
             Assert.True(JsonCompareModelToString.Compare<JsonInputModel>(jsonInputModel, ConstantsJsonSamples.JsonSampleInputData2_ElaboratedWithComputeFmlOnJsonInput));
         }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic")]
         [Fact]
         public void ComputeFml_Test_Error_On_Input_Parameter()
         {
