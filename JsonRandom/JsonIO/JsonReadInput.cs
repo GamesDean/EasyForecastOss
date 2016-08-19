@@ -1,19 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using CSharpFunctionalExtensions;
+using EasyForecast.SymEngine.Constants;
 
 
 namespace EasyForecast.SymEngine.JsonIO
 {
     public class JsonReadInput
     {
-        // TODONOW write ReadJsonStringFromFile
         public Result<string> ReadJsonStringFromFile(string InputFilePath)
         {
-            return Result.Ok("JsonString");
+            // TODOLATER add code to catch file reading errors; if exception, return Result.Fail
+            string readJsonInputFromFile = System.IO.File.ReadAllText(InputFilePath);
+
+            return Result.Ok(readJsonInputFromFile);
         }
     }
 }
