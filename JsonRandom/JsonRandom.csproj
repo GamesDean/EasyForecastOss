@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="JsonIO\JsonWriteOutput.cs" />
     <Compile Include="JsonIO\JsonReadInput.cs" />
+    <Compile Include="JsonUtils\JsonCompareModelToString.cs" />
     <Compile Include="JsonUtils\JsonMergeInputAndWriteOutput.cs" />
     <Compile Include="JsonUtils\JsonInputComputeFml.cs" />
     <Compile Include="Logs\MessageLog.cs" />
