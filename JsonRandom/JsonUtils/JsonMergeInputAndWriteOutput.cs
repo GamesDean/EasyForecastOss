@@ -8,11 +8,13 @@ namespace EasyForecast.SymEngine.JsonUtils
 
         // TODONOW write MergeAndWrite
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic")]
-        public JsonOutputModel MergeAndWrite(JsonInputModel jsonInput)
+        public Result<JsonOutputModel> MergeAndWrite(JsonInputModel jsonInput)
         {
             JsonOutputModel jsonOutput = new JsonOutputModel();
 
-            return jsonOutput;
+            // prendi cicli di copia da 'JsonInputComputeFml'
+
+            return Result.Ok(jsonOutput);
         }
     }
 }
