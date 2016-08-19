@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
-namespace EasyForecast.SymEngine.JsonModels
+namespace EasyForecast.SymEngine.Data.IO.Model
 {
     // TODOLATER if useful modify IList<> properties implementing suggestion of rule "CA2227: Collection properties should be read only" https://msdn.microsoft.com/library/ms182327.aspx?cs-save-lang=1&cs-lang=csharp )
     public class NumParameter
     {
         public string ArrayName { get; set; }
-        public IList<int> ArrayContent { get; set; }
+        public IList<decimal> ArrayContent { get; set; }
     }
 
     public class StrParameter
@@ -28,7 +24,7 @@ namespace EasyForecast.SymEngine.JsonModels
     public class FmlNumParameter
     {
         public string ArrayName { get; set; }
-        public IList<int> ArrayContent { get; set; }
+        public IList<string> ArrayContent { get; set; }
     }
 
     public class FmlStrParameter

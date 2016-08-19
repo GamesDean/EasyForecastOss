@@ -40,8 +40,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CSharpFunctionalExtensions, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CSharpFunctionalExtensions.1.4.0\lib\net45\CSharpFunctionalExtensions.dll</HintPath>
+    <Reference Include="CSharpFunctionalExtensions, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CSharpFunctionalExtensions.1.5.0\lib\net45\CSharpFunctionalExtensions.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="FluentAssertions, Version=4.13.0.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
@@ -84,18 +84,32 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
       </ItemGroup>
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="aaa\TestsUtils\aaaGenerateJsonFromObject.cs" />
     <Compile Include="Constants\Constants.cs" />
     <Compile Include="Constants\ConstantsJsonSamples.cs" />
+    <Compile Include="CSharpFunctionalExtensions\CSharpFunctionalExtensions_Tests.cs" />
+    <Compile Include="Data\IO\Command\JsonOutputCommands_Tests.cs" />
+    <Compile Include="Fml\ComputeFml_Tests.cs" />
     <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="JsonIO\JsonReadInputTests.cs" />
-    <Compile Include="JsonIO\JsonWriteOutput.cs" />
-    <Compile Include="JsonUtils\JsonMergeInputAndWriteOutputTests.cs" />
-    <Compile Include="JsonUtils\JsonInputComputeFmlTests.cs" />
+    <Compile Include="FileIO\ReadFile_Tests.cs" />
+    <Compile Include="FileIO\WriteFile_Tests.cs" />
+    <Compile Include="Data\Model\JsonInputModel_Tests.cs" />
+    <Compile Include="Data\Model\JsonOutputModel_Tests.cs" />
+    <Compile Include="JsonUtils\JsonDeserializeObject_Tests.cs" />
+    <Compile Include="JsonUtils\JsonSerializeObject_Tests.cs" />
+    <Compile Include="Logs\LogMessagesComposition_Tests.cs" />
+    <Compile Include="ObjUtils\CompareObjectsContent_Tests.cs" />
+    <Compile Include="ObjUtils\CompareObjectToJsonString_Tests.cs" />
+    <Compile Include="Logic\IO\Query\JsonWriteInputToOutput_Tests.cs" />
+    <Compile Include="Data\Query\JsonInputComputeFml_Tests.cs" />
+    <Compile Include="Logs\MessageLog_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -111,6 +125,10 @@
     <CodeAnalysisDictionary Include="..\JsonRandom\CustomDictionary.xml">
       <Link>CustomDictionary.xml</Link>
     </CodeAnalysisDictionary>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="aaa\TestsSkeleton\" />
+    <Folder Include="Logic\IO\Command\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

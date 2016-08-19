@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
-namespace EasyForecast.SymEngine.JsonModels
+namespace EasyForecast.SymEngine.Data.IO.Model
 {
+    // TODO convert List to Dictionary
     // TODOLATER if useful modify IList<> properties implementing suggestion of rule "CA2227: Collection properties should be read only" https://msdn.microsoft.com/library/ms182327.aspx?cs-save-lang=1&cs-lang=csharp )
     public class NumColumn
     {
         public string ColumnName { get; set; }
-        public IList<int> ColumnContent { get; set; }
+        public IList<decimal> ColumnContent { get; set; }
     }
 
     public class StrColumn

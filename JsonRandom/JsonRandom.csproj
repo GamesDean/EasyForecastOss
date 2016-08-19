@@ -35,8 +35,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CSharpFunctionalExtensions, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\CSharpFunctionalExtensions.1.4.0\lib\net45\CSharpFunctionalExtensions.dll</HintPath>
+    <Reference Include="CSharpFunctionalExtensions, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CSharpFunctionalExtensions.1.5.0\lib\net45\CSharpFunctionalExtensions.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="FluentAssertions, Version=4.13.0.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
@@ -61,32 +61,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="JsonIO\JsonWriteOutput.cs" />
-    <Compile Include="JsonIO\JsonReadInput.cs" />
-    <Compile Include="JsonUtils\JsonCompareModelToString.cs" />
-    <Compile Include="JsonUtils\JsonMergeInputAndWriteOutput.cs" />
-    <Compile Include="JsonUtils\JsonInputComputeFml.cs" />
+    <Compile Include="Data\IO\Command\JsonOutputCommands.cs" />
+    <Compile Include="FileIO\WriteFile.cs" />
+    <Compile Include="FileIO\ReadFile.cs" />
+    <Compile Include="Fml\ComputeFml.cs" />
+    <Compile Include="JsonUtils\JsonSerializeObject.cs" />
+    <Compile Include="JsonUtils\JsonDeserializeObject.cs" />
+    <Compile Include="Logs\LogLevels.cs" />
+    <Compile Include="Logs\LogMessagesComposition.cs" />
+    <Compile Include="ObjUtils\CompareObjectToJsonString.cs" />
+    <Compile Include="Logic\IO\Query\JsonWriteInputToOutput.cs" />
+    <Compile Include="Data\IO\Query\JsonInputComputeFml.cs" />
     <Compile Include="Logs\MessageLog.cs" />
     <Compile Include="Constants\ConstantsJsonSamples.cs" />
     <Compile Include="Constants\FileConstants.cs" />
     <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="JsonModels\JsonInputModel.cs" />
-    <Compile Include="JsonModels\JsonOutputModel.cs" />
+    <Compile Include="Data\IO\Model\JsonInputModel.cs" />
+    <Compile Include="Data\IO\Model\JsonOutputModel.cs" />
+    <Compile Include="ObjUtils\CompareObjectsContent.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="zDocs\Unused code\ClassJsonInput.txt" />
-    <Content Include="zDocs\Unused code\ClassJsonOutput.txt" />
+    <Content Include="zDocs\UnusedCode\ClassJsonInput.txt" />
+    <Content Include="zDocs\UnusedCode\ClassJsonOutput.txt" />
+    <Content Include="zDocs\Vault\JsonNotes.txt" />
     <None Include="App.config" />
-    <None Include="zDocs\Class diagrams\ClassDiagram1.cd" />
+    <None Include="zDocs\ClassDiagrams\ClassDiagram1.cd" />
     <Content Include="TestData\json_sample_input.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="TestData\json_sample_output.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="zDocs\Class diagrams\ClassDiagram2.cd" />
+    <None Include="zDocs\ClassDiagrams\ClassDiagram2.cd" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -94,7 +102,9 @@
   <ItemGroup>
     <CodeAnalysisDictionary Include="CustomDictionary.xml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Logic\IO\Command\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
