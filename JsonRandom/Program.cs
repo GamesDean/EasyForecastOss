@@ -1,57 +1,84 @@
-﻿
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+using CSharpFunctionalExtensions;
+using EasyForecast.SymEngine.JsonUtils;
+using EasyForecast.SymEngine.Data.IO.Command;
+using EasyForecast.SymEngine.Data.IO.Model;
+using EasyForecast.SymEngine.Constants;
+using EasyForecast.SymEngine.Logs;
+using EasyForecast.SymEngine.FileIO;
+using EasyForecast.SymEngine.Logic.IO.Query;
 
+[assembly: CLSCompliant(false)]
 
 namespace EasyForecast.SymEngine.Json
 {
     public class Program
     {
-
-        static void Main(string[] args)
+        // this is the "Composition root" as defined in http://blog.ploeh.dk/2011/07/28/CompositionRoot/
+        private static void MainSteps()
         {
+            // new log instance
+            MessageLog log = new MessageLog();
 
-            string path = "C:\\Users\\Lorenzo\\Documents\\Visual Studio 2015\\Projects\\JsonRandom\\JsonRandom\\json_sample\\";
+            // read the json input from file
+            Result<string> jsonInputFromFile = ReadFile.ReadStringFromFile(Environment.CurrentDirectory + FileConstants.TestDataPath + FileConstants.JsonSampleInputFileName);
+            if (jsonInputFromFile.IsFailure)
+            {
+                log.LogMessage(LogLevels.FatalForInternalProblem, jsonInputFromFile.Error);
+                return;
+            }
 
-            ///read the json input from file,then parse it 
+            // deserialize Json string 'jsonInputFromFile' in class 'JsonInputModel'
+            Result<JsonInputModel> jsonInputModel = JsonDeserializeObject<JsonInputModel>.DeserializeObject(jsonInputFromFile.Value);
+            if (jsonInputModel.IsFailure)
+            {
+                log.LogMessage(LogLevels.FatalForInternalProblem, jsonInputModel.Error);
+                return;
+            }
 
-            string readJsonInputFromFile = System.IO.File.ReadAllText(path + "json_sample_input.json");
-            string jsonInputResult = JsonConvert.DeserializeObject(readJsonInputFromFile).ToString();
-            JToken jtokenJsoninput = JObject.Parse(jsonInputResult);
+            // compute FML from and generate Output 
+            JsonWriteInputToOutput jsonWriteInputToOutput = new JsonWriteInputToOutput();
+            Result<JsonOutputModel> jsonOutputModel = jsonWriteInputToOutput.ComputeFmlAndWriteOutput(jsonInputModel.Value, "Table1", 1);
+            if (jsonOutputModel.IsFailure)
+            {
+                log.LogMessage(LogLevels.FatalForInvalidUserActionOrInput, jsonOutputModel.Error);
+                return;
+            }
 
-            ///read the json output from file,then parse it   
+            // serialize output
+            Result<string> jsonOutputSerialized = JsonSerializeObject<JsonOutputModel>.SerializeObject(jsonOutputModel.Value, true);
+            if (jsonOutputSerialized.IsFailure)
+            {
+                log.LogMessage(LogLevels.FatalForInvalidUserActionOrInput, jsonOutputSerialized.Error);
+                return;
+            }
 
-            string readJsonOutputFromFile = System.IO.File.ReadAllText(path + "json_sample_output.json");
-            string jsonOutputResult = (string)JsonConvert.DeserializeObject(readJsonOutputFromFile).ToString();
-            JToken jtokenJsonOutput = JObject.Parse(jsonOutputResult);
+            // write output to file
+            Result jsonOutputToFile = WriteFile.WriteStringToFile(jsonOutputSerialized.Value, Environment.CurrentDirectory + FileConstants.TestDataPath + FileConstants.JsonSampleOutputFileName);
+            if (jsonOutputToFile.IsFailure)
+            {
+                log.LogMessage(LogLevels.FatalForInternalProblem, jsonOutputToFile.Error);
+                return;
+            }
 
+            // TODONOW controlla se un metodo è Pure con reflection
+            // TODONOW controlla se tutti i metodi Pure testano la non modifica dei parametri di input
 
+            // TODONOW fai prova con più FEC di Input ('JsonInputComputeFml+Tests') e più TABELLE di Output ('JsonOutputCommands+Tests' e 'JsonWriteInputToOutput+Tests') <le tabelle saranno create in automatico a partire dai FEC>
 
-            JsonOutput jOutput = new JsonOutput();
+            // TODONOW rendi MainSteps una classe, estrai interfaccia di LOG e passa la classe una delle varie classi di Log da 'Main' a 'MainSteps' tra i parametri di chiamata alla funzione
 
-            /// input json fields to shuffle,you can choose one of them
-            
-            string numArrayNameXYZ1 = jOutput.NumArrayNameXYZ1;
-            string numArrayNameXYZ2 = jOutput.NumArrayNameXYZ2;
-            string numArrayNameXYZ3 = jOutput.NumArrayNameXYZ3;
+            // end of Main steps
+            return;
 
-            /// output json fields takin' the shuffled values
-            
-            string numColumnNameXYZ1 = jOutput.NumColumnNameXYZ1;
-            string numColumnNameXYZ2 = jOutput.NumColumnNameXYZ2;
-            string numColumnNameXYZ3 = jOutput.NumColumnNameXYZ3;
+        }
 
-            string jsonOutput = jOutput.Jreplace( jtokenJsoninput, numArrayNameXYZ1, numColumnNameXYZ1, jtokenJsonOutput);
+        static void Main()
+        {
+            MainSteps();
 
-            Console.WriteLine(jsonOutput);
+            Console.WriteLine("All done");
             Console.ReadLine();
-
-
         }
     }
 }

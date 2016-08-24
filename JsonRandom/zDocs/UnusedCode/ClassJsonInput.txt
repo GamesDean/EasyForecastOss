@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 namespace EasyForecast.SymEngine.Json
 {
 
+    // TODONOW   delete this!
+
     public class JsonInput
     {
-
-
 
         /// <summary>
         /// Purpose:Get selected values from FECs.NumParameters.NumArrayXYZ'n'.ArrayContent
@@ -28,6 +28,9 @@ namespace EasyForecast.SymEngine.Json
 
         public int[] GetFecFieldValues(string numArrayName, JToken input)
         {
+
+            if (input == null)
+                throw new ArgumentNullException("input");
 
             JToken arrayContent = input.SelectToken("$.FECs..NumParameters[?(@.ArrayName==" + numArrayName + ")].ArrayContent");
 
@@ -49,7 +52,6 @@ namespace EasyForecast.SymEngine.Json
         /// Output/Return : a string array
         /// Side Effects : none
         /// Error case : the array passed as parameter must not be null/empty
-        /// 
         /// </summary>
         /// <param name="values"></param>
         /// <returns></returns>
@@ -59,7 +61,6 @@ namespace EasyForecast.SymEngine.Json
             int[] shuffled = values.OrderBy(n => Guid.NewGuid()).ToArray();
             return shuffled;
         }
-
 
     }
 

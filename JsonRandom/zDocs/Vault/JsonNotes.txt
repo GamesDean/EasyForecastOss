@@ -1,0 +1,19 @@
+﻿JSON VIEWER
+http://codebeautify.org/jsonviewer
+What can you do with JSON VIEWER ?
+    Beautify/Format your JSON.
+    Parse and Display your JSON in a tree view.
+    Minify/Compress your JSON.
+    Validate your JSON and help you to fix an error.
+    Convert your JSON into XML format.
+    Convert and export your JSON to CSV format.
+    Hover on image URL , JSON Viewer will display image.
+    Once you have created JSON Data. You can download as a file or save as link and Share.
+    JSON Viewer works well on Windows, MAC, Chrome, and Firefox.
+    JSON Pretty Print / Pretty JSON Tool
+
+
+
+http://jsonformatter.org/
+	JSON Formatter helps to format your JSON data. It also provides tree view which helps to navigate your formatted JSON data.
+	JSON Formatter also helps to validate and provides tools to convert JSON to XML, JSON to CSV. JSON Formatter works well in Windows, Mac, Chrome and Firefox.

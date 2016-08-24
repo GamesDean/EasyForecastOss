@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EasyForecast.SymEngine.Json.InputClass">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="EasyForecast.SymEngine.Json.InputClass.NumParameter" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>InputClass.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="EasyForecast.SymEngine.Json.InputClass.StrParameter" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>InputClass.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="EasyForecast.SymEngine.Json.InputClass.DateParameter" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>InputClass.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="EasyForecast.SymEngine.Json.InputClass.FmlNumParameter" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>InputClass.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="EasyForecast.SymEngine.Json.InputClass.FmlStrParameter" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>InputClass.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="EasyForecast.SymEngine.Json.InputClass.FmlDateParameter" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>InputClass.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="EasyForecast.SymEngine.Json.InputClass.FEC" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>InputClass.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="EasyForecast.SymEngine.Json.InputClass.JsonInputClass" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>InputClass.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InputClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasyForecast.SymEngine.Json.JsonInput" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>JsonInput.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasyForecast.SymEngine.Json.JsonOutput" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAFgAAAACgAAAAAAQAEAAEABANBA=</HashCode>
+      <FileName>JsonOutput.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasyForecast.SymEngine.Json.OutputClass">
+    <Position X="2.25" Y="2.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="EasyForecast.SymEngine.Json.OutputClass.NumColumn" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>OutputClass.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="EasyForecast.SymEngine.Json.OutputClass.StrColumn" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>OutputClass.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="EasyForecast.SymEngine.Json.OutputClass.DateColumn" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>OutputClass.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="EasyForecast.SymEngine.Json.OutputClass.Table" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>OutputClass.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="EasyForecast.SymEngine.Json.OutputClass.JsonOutputClass" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>OutputClass.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>OutputClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasyForecast.SymEngine.Json.Program" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

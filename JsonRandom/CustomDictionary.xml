@@ -1,0 +1,24 @@
+<Dictionary>
+   <Words>
+      <Unrecognized>
+      </Unrecognized>
+      <Recognized>
+         <Word>Fec</Word>
+         <Word>Fml</Word>
+         <Word>Num</Word>
+         <Word>num</Word>
+         <Word>Str</Word>
+         <Word>Sym</Word>
+      </Recognized>
+      <Deprecated>
+      </Deprecated>
+   </Words>
+   <Acronyms>
+      <CasingExceptions>
+         <Acronym>FEC</Acronym>
+         <Acronym>FECs</Acronym>
+         <Acronym>Fec</Acronym>
+         <Acronym>Num</Acronym>
+      </CasingExceptions>
+   </Acronyms>
+</Dictionary>
